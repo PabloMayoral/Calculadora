@@ -10,8 +10,11 @@ using System.Windows.Forms;
 
 namespace Calculadora
 {
+    
     public partial class Form1 : Form
     {
+
+        
         double operando1 = 0;
         String operacion = "";
         public Form1()
@@ -60,7 +63,57 @@ namespace Calculadora
             {
                 resultado = operando1 * operando2;
             }
+            else if (operacion == "AC")
+            {
+                operando1 = 0; operando2 = 0;
+            }
+            else if (operacion == "^")
+            {
+                resultado = Math.Pow(operando1, operando2);
+            }
+            else if (operacion == "^-1")
+            {
+                resultado = Math.Pow(operando1, -1);
+            }
+            else if (operacion == "^2")
+            {
+                resultado = Math.Pow(operando1, 2);
+            }
+            else if (operacion == "^3")
+            {
+                resultado = Math.Pow(operando1, 3);
+            }
+            else if (operacion == "sin")
+            {
+                resultado = Math.Sin(Math.PI * operando2 / 180.0);
+            }
+            else if (operacion == "cos")
+            {
+                resultado = Math.Cos(operando2);
+            }
+            else if (operacion == "tan")
+            {
+                resultado = Math.Tan(operando2);
+            }
+            else if (operacion == "ln")
+            {
+                resultado = Math.Log(operando2);
+            }
+            else if (operacion == "RAIZ")
+            {
+                resultado = Math.Sqrt(operando2);
+            }
+            else if (operacion == "PI")
+            {
+                resultado = Math.Log(operando2);
+            }
+            else if (operacion == "Log")
+            {
+                resultado = Math.PI;
+            }
             label1.Text = Convert.ToString(resultado);
         }
+
+      
     }
 }
